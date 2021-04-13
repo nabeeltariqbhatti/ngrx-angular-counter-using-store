@@ -17,6 +17,7 @@
     "target": "es2015",
     "module": "es2020",
     "noImplicitAny": false,
+    "strictPropertyInitialization": false,
     "lib": [
       "es2018",
       "dom"
@@ -26,6 +27,7 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+   
   }
 }
