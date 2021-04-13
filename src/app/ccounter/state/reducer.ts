@@ -1,4 +1,4 @@
-import { customIncrement, decrement, increment, reset } from './counter.actions';
+import { changeText, customIncrement, decrement, increment, reset } from './counter.actions';
 import {initialState} from './counter.state';
 
 import {createReducer,on} from '@ngrx/store';
@@ -32,7 +32,23 @@ on(customIncrement,( state,action)=>{
  counter:state.counter+ action.value
  }
 
-}));
+}),on(changeText,(state,action)=>{
+
+ return{
+...state,
+       text:"okay I am changed"
+ } 
+})
+
+);
+
+
+
+
+
+
+
+
 export function counterReducer(state,action){
 
  return _counterReducer(state,action);
