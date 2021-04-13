@@ -1,9 +1,11 @@
+import { Appstate } from './../../store/app.state';
 import { getText } from './../state/counter.selector';
 import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
 import { changeText, customIncrement } from '../state/counter.actions';
 import { CounterState } from '../state/counter.state';
 import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-custom-counter-input',
@@ -13,7 +15,7 @@ import { Observable } from 'rxjs';
 export class CustomCounterInputComponent implements OnInit {
 value:number=0;
 text$ :Observable<string>;
-  constructor(private store:Store<{counter:CounterState}>) { }
+  constructor(private store:Store<Appstate>) { }
 
   ngOnInit(): void {
         console.log("Change Text");

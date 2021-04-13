@@ -22,7 +22,7 @@ on(decrement,( state) =>{
 }),on(reset,( state) =>{
  return {
   ...state,
-  counter: state.counter-1
+  counter: 0
  }
 
 }),
