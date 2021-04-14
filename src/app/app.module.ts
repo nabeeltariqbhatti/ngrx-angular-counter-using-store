@@ -18,6 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { postReducer } from './posts/posts-list/state/post.reducer';
 import { AddPostsComponent } from './posts/add-posts/add-posts.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 
 
@@ -33,6 +34,7 @@ import { AddPostsComponent } from './posts/add-posts/add-posts.component';
     HeaderComponent,
     PostsListComponent,
     AddPostsComponent,
+    EditPostComponent,
 
     
   ],

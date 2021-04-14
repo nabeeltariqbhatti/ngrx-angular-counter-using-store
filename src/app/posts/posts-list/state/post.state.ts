@@ -9,10 +9,10 @@ export interface PostState{
   { id:'1',
  title:"Web Development",
  description:"This is the dummy description of this post "},
-  { id:'1',
+  { id:'2',
  title:"Web Development",
  description:"This is the dummy description of this post "}
- , { id:'1',
+ , { id:'3',
  title:"Web Development",
  description:"This is the dummy description of this post "}
  ]
