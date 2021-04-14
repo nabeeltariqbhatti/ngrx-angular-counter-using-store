@@ -1,0 +1,24 @@
+<div class="container">
+  <form action>
+    <div class="form-group">
+      <label for="title" class="col-sm-2 control-label">Title</label>
+      <input
+        type="text"
+        [(ngModel)]="title"
+        class="form-control"
+        placeholder="Title"
+      />
+      <label for="description" class="col-sm-2 control-label"
+        >Description</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="description"
+        placeholder="Description"
+      />
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

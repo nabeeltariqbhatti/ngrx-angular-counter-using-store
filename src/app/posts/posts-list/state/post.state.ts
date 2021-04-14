@@ -8,6 +8,12 @@ export interface PostState{
  posts:[
   { id:'1',
  title:"Web Development",
+ description:"This is the dummy description of this post "},
+  { id:'1',
+ title:"Web Development",
+ description:"This is the dummy description of this post "}
+ , { id:'1',
+ title:"Web Development",
  description:"This is the dummy description of this post "}
  ]
 

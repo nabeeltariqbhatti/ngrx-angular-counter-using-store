@@ -10,13 +10,14 @@ import { CounterButtonComponent } from './ccounter/counter-button/counter-button
 import {StoreModule} from '@ngrx/store'
 import { counterReducer } from './ccounter/state/reducer';
 import { CustomCounterInputComponent } from './ccounter/custom-counter-input/custom-counter-input.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { postReducer } from './posts/posts-list/state/post.reducer';
+import { AddPostsComponent } from './posts/add-posts/add-posts.component';
 
 
 
@@ -29,8 +30,10 @@ import { postReducer } from './posts/posts-list/state/post.reducer';
     CounterButtonComponent,
     CustomCounterInputComponent,
     HomeComponent,
+    ReactiveFormsModule,
     HeaderComponent,
     PostsListComponent,
+    AddPostsComponent,
     
   ],
   imports: [
