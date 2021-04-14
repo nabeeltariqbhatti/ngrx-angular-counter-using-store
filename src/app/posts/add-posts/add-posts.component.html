@@ -1,24 +1,20 @@
-<div class="container">
-  <form action>
-    <div class="form-group">
-      <label for="title" class="col-sm-2 control-label">Title</label>
-      <input
-        type="text"
-        [(ngModel)]="title"
-        class="form-control"
-        placeholder="Title"
-      />
-      <label for="description" class="col-sm-2 control-label"
-        >Description</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        [(ngModel)]="description"
-        placeholder="Description"
-      />
+<div class="row my-4">
+  <div class="col-md-12">
+    <h3>Add Post</h3>
+    <hr />
+    <form [formGroup]="postForm" (ngSubmit)="onAddPost()">
+      <div class="mb-3">
+        <label>Title</label>
+        <input type="text" class="form-control" formControlName="title" />
+      </div>
+      <div class="mb-3">
+        <label>Description</label>
+        <textarea class="form-control" formControlName="description"></textarea>
+      </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
+      <div class="my-3">
+        <button type="submit" class="btn btn-primary">Add Post</button>
+      </div>
+    </form>
+  </div>
 </div>

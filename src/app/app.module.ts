@@ -30,14 +30,14 @@ import { AddPostsComponent } from './posts/add-posts/add-posts.component';
     CounterButtonComponent,
     CustomCounterInputComponent,
     HomeComponent,
-    ReactiveFormsModule,
     HeaderComponent,
     PostsListComponent,
     AddPostsComponent,
+
     
   ],
   imports: [
-    BrowserModule,FormsModule,
+    BrowserModule,FormsModule,ReactiveFormsModule,
     AppRoutingModule,
     StoreModule.forRoot(appReducer), 
     StoreDevtoolsModule.instrument({

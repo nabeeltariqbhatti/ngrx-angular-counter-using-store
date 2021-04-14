@@ -1,5 +1,10 @@
+import { addPost } from './../posts-list/state/post.action';
+import { Store } from '@ngrx/store';
+import { Post } from 'src/app/models/posts.model';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { Appstate } from 'src/app/store/app.state';
+
 
 @Component({
   selector: 'app-add-posts',
@@ -8,14 +13,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddPostsComponent implements OnInit {
 
+  allow:boolean = false;
   postForm: FormGroup
-  constructor() { }
+  constructor(private store:Store<Appstate>) { }
 
   ngOnInit(): void {
-this.postForm = new FormGroup({
-  title:new FormControl(null,[Validators.required,Validators.minLength(6)]),
-  description:new FormControl(null,[Validators.required,Validators.minLength(6)])
-})
+ this.postForm = new FormGroup({
+      title: new FormControl(),
+      description: new FormControl(),
+    });
   }
 
+
+onAddPost() {
+ 
+    const post: Post = {
+      title: this.postForm.value.title,
+      description: this.postForm.value.description,
+    };
+console.log(post);
+    this.store.dispatch(addPost({ post }));
+  }
 }
+
