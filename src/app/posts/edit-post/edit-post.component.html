@@ -2,14 +2,23 @@
   <div class="col-md-12">
     <h3>Edit Post Post</h3>
     <hr />
-    <form>
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label>Title</label>
-        <input type="text" class="form-control" [value]="post.title" />
+        <input
+          type="text"
+          class="form-control"
+          formControlName="title"
+          [value]="post.title"
+        />
       </div>
       <div class="mb-3">
         <label>Description</label>
-        <textarea class="form-control" [value]="post.description"></textarea>
+        <textarea
+          class="form-control"
+          formControlName="description"
+          [value]="post.description"
+        ></textarea>
       </div>
 
       <div class="my-3">
