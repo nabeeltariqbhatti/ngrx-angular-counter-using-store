@@ -13,6 +13,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -22,16 +24,14 @@ import { environment } from 'src/environments/environment';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-  
-
-    
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,
     AppRoutingModule,
-    StoreModule.forRoot(appReducer), 
+   HttpClientModule,
+    EffectsModule.forRoot([]),
+    StoreModule.forRoot({}), 
     StoreDevtoolsModule.instrument({
-    
       logOnly: environment.production,
       
     })
