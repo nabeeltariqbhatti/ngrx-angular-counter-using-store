@@ -3,7 +3,7 @@ import { initialState } from './post.state';
 
 import {createReducer,on} from '@ngrx/store';
 import { state } from '@angular/animations';
-import { addPost, updatePost } from './post.action';
+import { addPost, deletePost, updatePost } from './post.action';
 
 
 
@@ -29,7 +29,15 @@ const _postReducer=createReducer(initialState,
   ...state,
   posts:updatedPosts,
  }
-})
+}),on(deletePost,( state,{id})=>{
+ const updatedPosts=state.posts.filter(post=>{
+  return post.id !== id;
+ })
+ console.log(updatedPosts);
+ return {
+  ...state,posts:updatedPosts
+
+ }})
 )
 
 

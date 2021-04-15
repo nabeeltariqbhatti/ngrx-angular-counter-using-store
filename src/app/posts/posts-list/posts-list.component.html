@@ -24,6 +24,10 @@ Posts list
         <a href="" class="btn btn-primary" [routerLink]="['edit', post.id]"
           >Edit
         </a>
+        &nbsp;
+        <button class="btn btn-danger" (click)="onDeletePost('post.id')">
+          Delete
+        </button>
       </td>
     </tr>
   </tbody>
