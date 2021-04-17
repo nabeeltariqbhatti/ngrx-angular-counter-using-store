@@ -1,3 +1,4 @@
+import { User } from './../../models/user.model';
 import { exhaustMap, map } from 'rxjs/operators';
 import { Actions, createEffect, Effect, ofType } from '@ngrx/effects';
 import { Injectable } from '@angular/core';
@@ -23,8 +24,9 @@ export class AuthEffects{
       exhaustMap((action) => {
         return this.authService.login(action.email, action.password).pipe(
           map((data) => {
-          
-            return loginSuccess();
+          const user=this.authService.formatUser(data);
+      
+            return loginSuccess({user});
           })
         );
       })
