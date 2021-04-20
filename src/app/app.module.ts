@@ -14,7 +14,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component'
 
 
 
@@ -24,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http'
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,
