@@ -32,7 +32,7 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
     AppRoutingModule,
    HttpClientModule,
     EffectsModule.forRoot([]),
-    StoreModule.forRoot({}), 
+    StoreModule.forRoot(appReducer), 
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
       
